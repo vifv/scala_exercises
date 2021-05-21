@@ -14,7 +14,7 @@ object Ch4Ex1 extends App {
 
 // Задача №2
 object Ch4Ex2 extends App {
-  val mapa = mutable.Map[String, Int]()
+  val mapa = mutable.Map[String, Int]("qwertyasdfgh" -> 1)
   val in = new Scanner(new java.io.File("/Users/vladislav/scala/scala_exercises/src/main/resources/myfile.txt"))
     while (in.hasNext()) {
       val str = in.next().replace("." , "").replace(",", "")
@@ -25,11 +25,12 @@ object Ch4Ex2 extends App {
                        // если нет, то добавляем ключ со значением 1
         for ((k, v) <- mapa)
           if (s.equals(k))
-            mapa(k -> v+1)
+            mapa +=(k -> (v+1))
           else
-            mapa(s -> 1)
+            mapa +=(s -> 1)
       }
     }
+  mapa -=("qwertyasdfgh" -> 1)
   for ((k,v) <- mapa) println (k,v)
 }
 
