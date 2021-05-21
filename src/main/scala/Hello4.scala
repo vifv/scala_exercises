@@ -30,7 +30,7 @@ object Ch4Ex2 extends App {
             mapa +=(s -> 1)
       }
     }
-  mapa -=("qwertyasdfgh" -> 1)
+  mapa -=("qwertyasdfgh")
   for ((k,v) <- mapa) println (k,v)
 }
 
