@@ -1,3 +1,4 @@
+import java.util
 import java.util.Scanner
 import scala.collection.mutable
 import scala.io.Source
@@ -19,7 +20,6 @@ object Ch4Ex2 extends App {
   val source = Source.fromFile("/Users/vladislav/scala/scala_exercises/src/main/resources/myfile.txt")
   val wordsArray = source.mkString
     .replaceAll("\\p{Punct}", " ")
-    .replaceAll("^", " ")
     .replaceAll("$", " ")
     .replaceAll("\\s+"," ")
     .split(" ")
@@ -28,7 +28,7 @@ object Ch4Ex2 extends App {
   val wordsMap = lowCaseWordsArr.groupBy(identity)
   var wordsMapRes = mutable.Map[String, Int]()
     for ((k,v) <- wordsMap) wordsMapRes +=(k -> v.length)
-  for ((k,v) <- wordsMapRes) println(k,v)
+  for ((k,v) <- wordsMap) println(k,v)
 }
 
 
