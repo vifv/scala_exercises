@@ -19,7 +19,6 @@ object Ch4Ex2 extends App {
   val source = Source.fromFile("/Users/vladislav/scala/scala_exercises/src/main/resources/myfile.txt")
   val wordsArray = source.mkString
     .replaceAll("\\p{Punct}", " ")
-    .replaceAll("^", " ")
     .replaceAll("$", " ")
     .replaceAll("\\s+"," ")
     .split(" ")
