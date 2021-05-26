@@ -38,19 +38,22 @@ object Origin extends java.awt.Point {
 }
 
 // Задача №4
-class Point(val x: Int, val y: Int) {}
+object Ch6Ex4 extends App {
 
-object Point {
-  def apply(x: Int, y: Int) = new Point(x, y)
+  class Point(val x: Int, val y: Int) {}
+
+  object Point {
+    def apply(x: Int, y: Int) = new Point(x, y)
+  }
+
+  val point = Point(2, 3)
 }
-
-//val point = Point(2, 3)
 
 // Задача №5
 object Ch6Ex5 extends App {
   val firstString = StdIn.readLine()
   val arrString = firstString.mkString.split(" ")
-  for (elem <- arrString.length - 1 to 0 by -1) print(arrString(elem)+" ")
+  for (elem <- arrString.length - 1 to 0 by -1) print(arrString(elem) + " ")
 }
 
 // Задача №6
@@ -64,12 +67,15 @@ object CardSuits extends Enumeration {
 }
 
 // Задача №7
+
 import CardSuits._
+
 def check(suit: CardSuits.Value): Unit = {
   if (suit == diamonds || suit == hearts) print("Red") else print("Black")
 }
 
 // Задача №8
+
 object Cube extends Enumeration {
   val red: Cube.Value = Value(0xff0000)
   val yellow: Cube.Value = Value(0xffff00)
