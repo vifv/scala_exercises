@@ -1,5 +1,3 @@
-import java.util
-import java.util.Scanner
 import scala.collection.mutable
 import scala.io.Source
 import scala.util.Sorting

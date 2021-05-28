@@ -177,19 +177,19 @@ object Ch8Ex6 extends App {
 }
 
 // Задача №7
-object Ch8Ex7 extends App {
-  class Square extends java.awt.Rectangle {
-    var angle = new Point(0, 0)
-    var width = 0
-
-    def this(angle: Point) {
-      this()
-      this.angle = angle
-    }
-
-    def this(angle: Point, width: Int) {
-      this(angle: Point)
-      this.width = width
-    }
-  }
-}
+//object Ch8Ex7 extends App {
+//  class Square extends java.awt.Rectangle {
+//    var angle: Point = new Point(0, 0)
+//    override var width = 0
+//
+//    def this(angle: Point) {
+//      this()
+//      this.angle = angle
+//    }
+//
+//    def this(angle: Point, width: Int) {
+//      this(angle: Point)
+//      this.width = width
+//    }
+//  }
+//}

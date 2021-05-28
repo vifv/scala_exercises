@@ -65,8 +65,11 @@ object CardSuits extends Enumeration {
 
 // Задача №7
 import CardSuits._
-def check(suit: CardSuits.Value): Unit = {
-  if (suit == diamonds || suit == hearts) print("Red") else print("Black")
+
+object Ch6Ex7 extends App {
+  def check(suit: CardSuits.Value): Unit = {
+    if (suit == diamonds || suit == hearts) print("Red") else print("Black")
+  }
 }
 
 // Задача №8
