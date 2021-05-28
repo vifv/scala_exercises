@@ -42,9 +42,9 @@ object Ch5Ex2 extends App {
 // Задача №3
 object Ch5Ex3 extends App {
   class Time (hrs: Int, min: Int) {
-    if (hrs > 23 && hrs < 0)
+    if (hrs > 23 && hrs < -1)
       throw new IllegalArgumentException("Введите валидное время")
-    if (min > 59 && min < 0)
+    if (min > 59 && min < -1)
       throw new IllegalArgumentException("Введите валидное время")
     private val hours = hrs
     private val minutes = min
@@ -64,9 +64,9 @@ object Ch5Ex3 extends App {
 // Задача №4
 object Ch5Ex4 extends App {
   class Time (hrs: Int, min: Int) {
-    if (hrs > 23 && hrs < 0)
+    if (hrs > 23 && hrs < -1)
       throw new IllegalArgumentException("Введите валидное время")
-    if (min > 59 && min < 0)
+    if (min > 59 && min < -1)
       throw new IllegalArgumentException("Введите валидное время")
     private val minutes = min+(hrs*60)
 
