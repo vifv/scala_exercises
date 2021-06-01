@@ -1,6 +1,3 @@
-import scala.collection.mutable.ArrayBuffer
-import scala.math.abs
-
 object Hello11 extends App {
   print("Решение упражнений 11 главы")
 }
@@ -8,8 +5,8 @@ object Hello11 extends App {
 // Задача №4
 object Ch11Ex4 extends App {
   class Money(doll: Int, cent: Int) {
-    var dollar = if (cent > 99) doll + cent / 100 else doll
-    var cents = if (cent > 99) cent - cent / 100 * 100 else cent
+    var dollar: Int = if (cent > 99) doll + cent / 100 else doll
+    var cents: Int = if (cent > 99) cent - cent / 100 * 100 else cent
 
     def +(money: Money): Money = new Money(dollar + money.dollar, cents + money.cents)
 
